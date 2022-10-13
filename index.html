@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="">
+      <ul>
+        <li>
+          <label for="mail">Email</label>
+          <input type="email" id="mail"/>
+          <span class="mail-error"></span>
+        </li>
+        <li>
+          <label for="country">Country</label>
+          <input type="text" id="country" minlength="3"/>
+          <span class="country-error"></span>
+        </li>
+        <li>
+          <label for="zip">Zip Code</label>
+          <input type="text" id="zip" required pattern="^\d{5}(?:[-\s]\d{4})?$"/>
+          <span class="zip-error"></span>
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <input type="password" id="password" required/>
+          <span class="password-error"></span>
+        </li>
+        <li>
+          <label for="password-validation"> Validation password</label>
+          <input type="password" id="password-validation" required/>
+          <span class="password-val-error"></span>
+        </li>
+      </ul>
+      <button id="btn" type="submit">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
