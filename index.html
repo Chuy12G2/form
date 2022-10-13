@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form action="">
+    <form action="" novalidate>
       <ul>
         <li>
           <label for="mail">Email</label>
@@ -22,17 +22,17 @@
         </li>
         <li>
           <label for="zip">Zip Code</label>
-          <input type="text" id="zip" required pattern="^\d{5}(?:[-\s]\d{4})?$"/>
+          <input type="text" id="zip" pattern="^\d{5}(?:[-\s]\d{4})?$"/>
           <span class="zip-error"></span>
         </li>
         <li>
           <label for="password">Password</label>
-          <input type="password" id="password" required/>
+          <input type="password" id="password"/>
           <span class="password-error"></span>
         </li>
         <li>
           <label for="password-validation"> Validation password</label>
-          <input type="password" id="password-validation" required/>
+          <input type="password" id="password-validation" pattern='/^(?=.*[a-z].*[a-z])(?=.*[!"#...\d].*[!"#...\d]).{8,}$/gmi'/>
           <span class="password-val-error"></span>
         </li>
       </ul>
